@@ -68,22 +68,22 @@ int _str_spn(char *str, char *pref);
 int _str_n_cmp(const char *str1, const char *str2, size_t num);
 
 char *fetch_camdda(char *camdda_line, int *last_camdda_status);
-int execute_cmd(char **cammda_args, char **start_of_args, int *last_cammda_status);
+int execute_cmd(char **camdda_args, char **start_of_args, int *last_camdda_status);
 int cmd_run(char **camdda_args, char **start_of_args, int *last_camdda_status);
-int process_args(int *last_command_status);
-int validate_args(char **command_arguments);
+int process_args(int *last_camdda_status);
+int validate_args(char **camdda_args);
 
-void read_line(char **cmd, ssize_t mode);
-void rep_var(char **command_arguments, int *last_command_status);
-void args_free(char **last_command_status, char **start_of_args);
-char **substitute_alias(char **command_arguments);
+void read_line(char **camdda, ssize_t mode);
+void rep_var(char **camdda_args, int *last_camdda_status);
+void args_free(char **last_camdda_status, char **start_of_args);
+char **substitute_alias(char **camdda_args);
 
-char **custom_strtok(char *cmd, char *c_deli);
+char **custom_strtok(char *camdda, char *c_deli);
 void *custom_realloc(void *buff, unsigned int first_s, unsigned int second_s);
 ssize_t custom_getline(char **buff_ptr, size_t *buff_size, FILE *stream);
 char *custom_itoa(int n);
-char *fetch_loc(char *cmd);
-int execute(char **command_arguments, char **args_start);
+char *fetch_loc(char *camdda);
+int execute(char **camdda_args, char **args_start);
 list_t *fetch_dir_p(char *env_path);
 void free_list(list_t *head);
 
