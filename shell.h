@@ -22,12 +22,13 @@ char *program_name;
  * struct builtin_s - Struct type defining builtin commands
  * @built_cmd_name: Builtin cmd name
  * @fun: Pointer to the builtin command
- */
+*/
+
 typedef struct builtin_s
 {
-        char *built_cmd_name;
-        int (*fun)(char **command_arguments, char **start_of_args);
-} builtin_t;
+	char *built_cmd_name;
+	int (*fun)(char **command_arguments, char **start_of_args);
+}builtin_t;
 
 /**
  * struct list_s - Struct type defining a linked list
@@ -36,9 +37,9 @@ typedef struct builtin_s
  */
 typedef struct list_s
 {
-        char *dir;
-        struct list_s *next;
-} list_t;
+	char *dir;
+	struct list_s *next;
+}list_t;
 
 /**
  * struct alias_s - Struct defining aliases
@@ -48,10 +49,10 @@ typedef struct list_s
  */
 typedef struct alias_s
 {
-        char *name;
-        char *value;
-        struct alias_s *next;
-} alias_t;
+	char *name;
+	char *value;
+	struct alias_s *next;
+}alias_t;
 
 alias_t *alias_list;
 
