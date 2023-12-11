@@ -67,9 +67,9 @@ char *_str_n_cat(char *dest_str, const char *src_str, size_t num);
 int _str_spn(char *str, char *pref);
 int _str_n_cmp(const char *str1, const char *str2, size_t num);
 
-char *fetch_cmd(char *camdda_line, int *last_command_status);
-int execute_cmd(char **cammda_args, char **start_of_args, int *last_command_status);
-int cmd_run(char **command_arguments, char **start_of_args, int *last_command_status);
+char *fetch_camdda(char *camdda_line, int *last_camdda_status);
+int execute_cmd(char **cammda_args, char **start_of_args, int *last_cammda_status);
+int cmd_run(char **camdda_args, char **start_of_args, int *last_camdda_status);
 int process_args(int *last_command_status);
 int validate_args(char **command_arguments);
 
