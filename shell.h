@@ -87,12 +87,12 @@ int execute(char **camdda_args, char **args_start);
 list_t *fetch_dir_p(char *env_path);
 void free_list(list_t *head);
 
-int (*fetch_built(char *cmd))(char **command_arguments, char **start_of_args);
-int exit_hsh(char **command_arguments, char **start_of_args);
-int env_hsh(char **command_arguments, char __attribute__((__unused__)) **start_of_args);
-int setenv_hsh(char **command_arguments, char __attribute__((__unused__)) **start_of_args);
-int unsetenv_hsh(char **command_arguments, char __attribute__((__unused__)) **start_of_args);
-int cd_hsh(char **command_arguments, char __attribute__((__unused__)) **start_of_args);
+int (*fetch_built(char *camdda))(char **camdda_args, char **start_of_args);
+int exit_hsh(char **camdda_args, char **start_of_args);
+int env_hsh(char **camdda_args, char __attribute__((__unused__)) **start_of_args);
+int setenv_hsh(char **camdda_args, char __attribute__((__unused__)) **start_of_args);
+int unsetenv_hsh(char **camdda_args, char __attribute__((__unused__)) **start_of_args);
+int cd_hsh(char **camdda_args, char __attribute__((__unused__)) **start_of_args);
 int alias_hsh(char **command_arguments, char __attribute__((__unused__)) **start_of_args);
 int help_hsh(char **command_arguments, char __attribute__((__unused__)) **start_of_args);
 
