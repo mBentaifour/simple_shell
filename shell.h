@@ -15,8 +15,8 @@
 #define EXIT -3
 
 extern char **environ;
-int count_of_history;
-char *program_name;
+int story_count;
+char *pgram_name;
 
 /**
  * struct builtin_s - Struct type defining builtin commands
@@ -27,7 +27,7 @@ char *program_name;
 typedef struct builtin_s
 {
 	char *built_cmd_name;
-	int (*fun)(char **command_arguments, char **start_of_args);
+	int (*fun)(char **argv, char **start_of_args);
 }builtin_t;
 
 /**
@@ -67,8 +67,8 @@ char *_str_n_cat(char *dest_str, const char *src_str, size_t num);
 int _str_spn(char *str, char *pref);
 int _str_n_cmp(const char *str1, const char *str2, size_t num);
 
-char *fetch_cmd(char *command_line, int *last_command_status);
-int execute_cmd(char **command_arguments, char **start_of_args, int *last_command_status);
+char *fetch_cmd(char *camdda_line, int *last_command_status);
+int execute_cmd(char **cammda_args, char **start_of_args, int *last_command_status);
 int cmd_run(char **command_arguments, char **start_of_args, int *last_command_status);
 int process_args(int *last_command_status);
 int validate_args(char **command_arguments);
