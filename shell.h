@@ -93,21 +93,21 @@ int env_hsh(char **camdda_args, char __attribute__((__unused__)) **start_of_args
 int setenv_hsh(char **camdda_args, char __attribute__((__unused__)) **start_of_args);
 int unsetenv_hsh(char **camdda_args, char __attribute__((__unused__)) **start_of_args);
 int cd_hsh(char **camdda_args, char __attribute__((__unused__)) **start_of_args);
-int alias_hsh(char **command_arguments, char __attribute__((__unused__)) **start_of_args);
-int help_hsh(char **command_arguments, char __attribute__((__unused__)) **start_of_args);
+int alias_hsh(char **camdda_args, char __attribute__((__unused__)) **start_of_args);
+int help_hsh(char **camdda_args, char __attribute__((__unused__)) **start_of_args);
 
 char **custom_getenv(const char *var);
 void envir_free(void);
 char **_cpy_environement();
 
-char *sec_cd_err(char **command_arguments);
-char *sec_syn_err(char **command_arguments);
-char *ex_126_err(char **command_arguments);
-char *ex_127_err(char **command_arguments);
-int generate_err(char **command_arguments, int error);
-char *env_err(char **command_arguments);
-char *first_err(char **command_arguments);
-char *sec_ex_err(char **command_arguments);
+char *sec_cd_err(char **camdda_args);
+char *sec_syn_err(char **camdda_args);
+char *ex_126_err(char **camdda_args);
+char *ex_127_err(char **camdda_args);
+int generate_err(char **command_args, int error);
+char *env_err(char **command_args);
+char *first_err(char **command_args);
+char *sec_ex_err(char **command_args);
 
 alias_t *append_alias(alias_t **first_node, char *alias_name, char *alias_value);
 
