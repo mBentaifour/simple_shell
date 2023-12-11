@@ -104,10 +104,10 @@ char *sec_cd_err(char **camdda_args);
 char *sec_syn_err(char **camdda_args);
 char *ex_126_err(char **camdda_args);
 char *ex_127_err(char **camdda_args);
-int generate_err(char **command_args, int error);
-char *env_err(char **command_args);
-char *first_err(char **command_args);
-char *sec_ex_err(char **command_args);
+int generate_err(char **camdda_args, int error);
+char *env_err(char **camdda_args);
+char *first_err(char **camdda_args);
+char *sec_ex_err(char **camdda_args);
 
 alias_t *append_alias(alias_t **first_node, char *alias_name, char *alias_value);
 
@@ -125,5 +125,5 @@ void displ_all_info(void);
 void alias_displ_info(void);
 void cd_displ_info(void);
 
-int cmd_process(char *path_f, int *last_command_status);
+int camdda_process(char *path_f, int *last_camdda_status);
 #endif
