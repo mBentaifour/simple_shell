@@ -13,8 +13,8 @@ int main(int argc, char *argv[])
 	int rtrn_status = 0, execution_status;
 	int *execution_status_ptr = &execution_status;
 
-	program_name = argv[0];
-	history_count = 1;
+	pgram_name = argv[0];
+	story_count = 1;
 	alias_list = NULL;
 	signal(SIGINT, sig_handler);
 	*execution_status_ptr = 0;
@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 		exit(-100);
 	if (argc != 1)
 	{
-		rtrn_status = cmd_process(argv[1], execution_status_ptr);
+		rtrn_status = camdda_process(argv[1], execution_status_ptr);
 		envir_free();
 		list_alias_free(alias_list);
 		return (*execution_status_ptr);
