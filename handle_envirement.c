@@ -9,8 +9,9 @@ int unsetenv_shll(char **cmd_args, char __attribute__((__unused__)) **start_of_a
 * @cmd_args: Arguments
 * @start_of_args: starting of arguments
 *
-* Return: 0 or -1.
+* Return: 0 or -1
 */
+
 int env_shll(char **cmd_args, char __attribute__((__unused__)) **start_of_args)
 {
 	char new_c = '\n';
@@ -30,11 +31,12 @@ int env_shll(char **cmd_args, char __attribute__((__unused__)) **start_of_args)
 }
 
 /**
-* setenv_shll - appends to the envirement variables.
-* @cmd_args: Arguments.
-* @start_of_args: starting of command
-* Return: 0 or -1.
+* setenv_shll - appends to the envirement variables
+* @cmd_args: arguments
+* @start_of_args: starting of arguments
+* Return: 0 or -1
 */
+
 int setenv_shll(char **cmd_args, char __attribute__((__unused__)) **start_of_args)
 {
 	size_t s;
@@ -81,11 +83,12 @@ int setenv_shll(char **cmd_args, char __attribute__((__unused__)) **start_of_arg
 }
 
 /**
-* unsetenv_shll - Removes the env var.
-* @cmd_args: Args.
-* @start_of_args: starting of the arg.
+* unsetenv_shll - removes envirement variables
+* @cmd_args: arguments
+* @start_of_args: starting of arguments
 * Return: 0 or -1
 */
+
 int unsetenv_shll(char **cmd_args, char __attribute__((__unused__)) **start_of_args)
 {
 	size_t s;
