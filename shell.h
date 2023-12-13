@@ -15,13 +15,13 @@
 #define EXIT -3
 
 extern char **environ;
-int story_count;
+int history_count;
 char *pgram_name;
 
 /**
- * struct builtin_s - Struct type defining builtin commands
- * @built_cmd_name: Builtin cmd name
- * @fun: Pointer to the builtin command
+ * struct builtin_s - str type defining builtin commands
+ * @built_cmd_name: builtin cmd name
+ * @fun: pointer to builtin command
 */
 
 typedef struct builtin_s
@@ -31,10 +31,11 @@ typedef struct builtin_s
 } builtin_t;
 
 /**
- * struct list_s - Struct type defining a linked list
- * @dir: The path of the directory
- * @next: Pointer to the next node
- */
+ * struct list_s - struct type defining a linked list
+ * @dir: the path of directory
+ * @next: pointer to next node
+*/
+
 typedef struct list_s
 {
 	char *dir;
@@ -42,11 +43,12 @@ typedef struct list_s
 } list_t;
 
 /**
- * struct alias_s - Struct defining aliases
- * @name: Alias's name
- * @value: Alias's value
- * @next: Pointer to the next node
+ * struct alias_s - struct defining aliases
+ * @name: alias name
+ * @value: alias value
+ * @next: pointer to next node
  */
+
 typedef struct alias_s
 {
 	char *name;
