@@ -1,11 +1,11 @@
 #include "shell.h"
 
 /**
- * main - principal function to execut the Shell.
- * @argc: arguments count.
- * @argv: an array of pointers to the arguments.
+ * main - principal function to execut shell
+ * @argc: arguments count
+ * @argv: an array of pointers to arguments
  *
- * Return: returned value from the execution.
+ * Return: returned value from execution
  */
 int main(int argc, char *argv[])
 {
