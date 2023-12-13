@@ -11,6 +11,7 @@ int unsetenv_shll(char **cmd_args, char __attribute__((__unused__)) **start_of_a
 *
 * Return: 0 or -1
 */
+
 int env_shll(char **cmd_args, char __attribute__((__unused__)) **start_of_args)
 {
 	char new_c = '\n';
@@ -35,6 +36,7 @@ int env_shll(char **cmd_args, char __attribute__((__unused__)) **start_of_args)
 * @start_of_args: starting of arguments
 * Return: 0 or -1
 */
+
 int setenv_shll(char **cmd_args, char __attribute__((__unused__)) **start_of_args)
 {
 	size_t s;
@@ -86,6 +88,7 @@ int setenv_shll(char **cmd_args, char __attribute__((__unused__)) **start_of_arg
 * @start_of_args: starting of arguments
 * Return: 0 or -1
 */
+
 int unsetenv_shll(char **cmd_args, char __attribute__((__unused__)) **start_of_args)
 {
 	size_t s;
