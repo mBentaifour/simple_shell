@@ -127,5 +127,5 @@ void displ_all_info(void);
 void alias_displ_info(void);
 void cd_displ_info(void);
 
-int camdda_process(char *path_f, int *last_camdda_status);
+int cmd_prcs(char *path_f, int *last_cmd_status);
 #endif
