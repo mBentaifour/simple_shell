@@ -2,30 +2,31 @@
 
 /**
  * is_exist - check existence of file
- * @path_f:file path
+ * @path_f: file path
  *
- * Return: always return exit code 127.
+ * Return: always exit code 127
  */
+
 int is_exist(char *path_f)
 {
 	int length;
 	char *str_his;
 	char *buff_err;
 
-	str_his = custom_itoa(story_count);
+	str_his = custom_itoa(history_count);
 	if (!str_his)
 		return (127);
-	length = _str_length(pgram_name) + _str_length(str_his) + _str_length(path_f) + 16;
+	length = _str_length(program_name) + _str_length(str_his) + _str_length(path_f) + 16;
 	buff_err = malloc(sizeof(char) * (length + 1));
 	if (!buff_err)
 	{
 		free(str_his);
 		return (127);
 	}
-	_str_cpy(buff_err, pgram_name);
+	_str_cpy(buff_err, program_name);
 	_str_cat(buff_err, ": ");
 	_str_cat(buff_err, str_his);
-	_str_cat(buff_err, ": Can not open ");
+	_str_cat(buff_err, ": Can't open ");
 	_str_cat(buff_err, path_f);
 	_str_cat(buff_err, "\n");
 	free(str_his);
@@ -36,12 +37,13 @@ int is_exist(char *path_f)
 }
 
 /**
- * cmd_process - processes a command
- * @path_f: file path
+ * cmd_process - processes command
+ * @path_f: a file path
  * @last_cmd_status: value of last executed cmd
  *
- * Return: last cmd valur or 127 If fails
+ * Return: last cmd value or 127 if it fails
  */
+
 int cmd_process(char *path_f, int *last_cmd_status)
 {
 	char *line, **args, **start_of_args;
@@ -51,7 +53,7 @@ int cmd_process(char *path_f, int *last_cmd_status)
 	unsigned int n = 0;
 	unsigned int first_s = 120;
 
-	story_count = 0;
+	history_count = 0;
 	fd = open(path_f, O_RDONLY);
 	if (fd == -1)
 	{
