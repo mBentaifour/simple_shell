@@ -1,8 +1,8 @@
 #include "shell.h"
 
 /**
- * is_exist - check existence of the file.
- * @path_f: the file path.
+ * is_exist - check existence of file
+ * @path_f:file path
  *
  * Return: always return exit code 127.
  */
@@ -36,11 +36,11 @@ int is_exist(char *path_f)
 }
 
 /**
- * cmd_process - processes a command.
- * @path_f: file path.
- * @last_cmd_status: value of last executed cmd.
+ * cmd_process - processes a command
+ * @path_f: file path
+ * @last_cmd_status: value of last executed cmd
  *
- * Return: last cmd valur or 127 If fails.
+ * Return: last cmd valur or 127 If fails
  */
 int cmd_process(char *path_f, int *last_cmd_status)
 {
