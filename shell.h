@@ -87,10 +87,10 @@ list_t *fetch_dir_p(char *env_path);
 void free_list(list_t *head);
 
 int (*fetch_built(char *cmd))(char **cmd_args, char **start_of_args);
-int exit_hsh(char **cmd_args, char **start_of_args);
-int env_hsh(char **cmd_args, char __attribute__((__unused__)) **start_of_args);
-int setenv_hsh(char **cmd_args, char __attribute__((__unused__)) **start_of_args);
-int unsetenv_hsh(char **cmd_args, char __attribute__((__unused__)) **start_of_args);
+int exit_shll(char **cmd_args, char **start_of_args);
+int env_shll(char **cmd_args, char __attribute__((__unused__)) **start_of_args);
+int setenv_shll(char **cmd_args, char __attribute__((__unused__)) **start_of_args);
+int unsetenv_shll(char **cmd_args, char __attribute__((__unused__)) **start_of_args);
 int cd_hsh(char **cmd_args, char __attribute__((__unused__)) **start_of_args);
 int alias_hsh(char **cmd_args, char __attribute__((__unused__)) **start_of_args);
 int help_hsh(char **cmd_args, char __attribute__((__unused__)) **start_of_args);
