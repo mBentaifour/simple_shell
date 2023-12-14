@@ -136,7 +136,7 @@ int cd_hsh(char **cmd_args, char __attribute__((__unused__)) **start_of_args)
 
 	inf_pa[0] = "OLDPWD";
 	inf_pa[1] = pre_pwd;
-	if (setenv_hsh(inf_pa, inf_pa) == -1)
+	if (setenv_shll(inf_pa, inf_pa) == -1)
 		return (-1);
 
 	inf_pa[0] = "PWD";
