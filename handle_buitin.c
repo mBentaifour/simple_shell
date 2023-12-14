@@ -16,9 +16,9 @@ int (*fetch_built(char *cmd))(char **cmd_args, char **start_of_args)
 {
 	builtin_t funcs[] = {
 		{"exit", exit_hsh},
-		{"env", env_hsh},
-		{"setenv", setenv_hsh},
-		{"unsetenv", unsetenv_hsh},
+		{"env", env_shll},
+		{"setenv", setenv_shll},
+		{"unsetenv", unsetenv_shll},
 		{"cd", cd_hsh},
 		{"alias", alias_hsh},
 		{"help", help_hsh},
@@ -34,14 +34,14 @@ int (*fetch_built(char *cmd))(char **cmd_args, char **start_of_args)
 }
 
 /**
-* exit_hsh - exists process
+* exit_shll - exists process
 * @cmd_args: arguments
 * @start_of_args: srating of arg
 *
 * Return: Satut value
 */
 
-int exit_hsh(char **cmd_args, char **start_of_args)
+int exit_shll(char **cmd_args, char **start_of_args)
 {
 	unsigned int n = 0;
 	unsigned int max = 1 << (sizeof(int) * 8 - 1);
