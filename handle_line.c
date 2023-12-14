@@ -73,7 +73,7 @@ ssize_t fetch_length(char *cmd)
 					fresh_length++;
 			}
 			else
-				check_oper(&cmd[index], &fresh_length);
+				check_operator(&cmd[index], &fresh_length);
 		}
 		else if (cursor == ';')
 		{

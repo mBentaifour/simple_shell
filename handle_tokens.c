@@ -40,7 +40,7 @@ int token_counter(char *str, char *c_deli)
 		if (*(str + i) != *c_deli)
 		{
 			tokens++;
-			i += get_len_token(str + i, c_deli);
+			i += len_token(str + i, c_deli);
 		}
 	}
 
@@ -74,7 +74,7 @@ char **custom_strtok(char *cmd, char *c_deli)
 		while (cmd[index] == *c_deli)
 			index++;
 
-		count_l = get_len_token(cmd + index, c_deli);
+		count_l = len_token(cmd + index, c_deli);
 
 		tokens_arr[index_token] = malloc(sizeof(char) * (count_l + 1));
 		if (!tokens_arr[index_token])
