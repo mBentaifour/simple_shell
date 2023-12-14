@@ -141,7 +141,7 @@ int cd_hsh(char **cmd_args, char __attribute__((__unused__)) **start_of_args)
 
 	inf_pa[0] = "PWD";
 	inf_pa[1] = pwd;
-	if (setenv_hsh(inf_pa, inf_pa) == -1)
+	if (setenv_shll(inf_pa, inf_pa) == -1)
 		return (-1);
 	if (cmd_args[0] && cmd_args[0][0] == '-' && cmd_args[0][1] != '-')
 	{
